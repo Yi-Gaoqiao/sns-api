@@ -5,9 +5,9 @@ from django.conf import settings
 def upload_path(instance, filename):
     """split file extension and store it"""
     ext = filename.split('.')[-1]
-    """
-    add image folder under the '_media' folder and then normalize the filename as below
-    """
+    
+    # Add image folder under the '_media' folder 
+    # and then normalize the filename as below    
     return '/'.join(['image'], str(instance.user.id)+str(instance.nickName)+str('.')+str(ext))
 
 
