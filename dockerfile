@@ -4,6 +4,8 @@ LABEL architecture="Tsubasa"
 ENV PYTHONUNBUFFERD 1
 
 COPY ./requirements.txt /requirements.txt
+RUN apk add --no-cache jpeg-dev zlib-dev
+RUN apk add --no-cache --virtual .build-deps build-base linux-headers
 RUN pip install -r /requirements.txt
 
 RUN mkdir /drf-sns
