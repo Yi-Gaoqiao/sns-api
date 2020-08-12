@@ -129,5 +129,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# store image files locally
+# MEDIA_ROOT : it contains the absolute path to the file system where Media files will be uploaded.
+# MEDIA_URL  : it is used to access media files.
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 MEDIA_URL = '/media/'
