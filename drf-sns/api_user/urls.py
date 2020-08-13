@@ -4,8 +4,8 @@ from api_user import views
 
 
 router = DefaultRouter()
-router = register('approval', views.FriendRequestViewSet)
-router = register('profile', views.ProfileViewSet)
+router.register('approval', views.FriendRequestViewSet)
+router.register('profile', views.ProfileViewSet)
 
 app_name = 'user'
 

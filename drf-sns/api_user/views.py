@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.settings import api_settings
 
-class CreateUserView(generics.CretaeAPIView):
+class CreateUserView(generics.CreateAPIView):
     """Create a new user"""
     serializer_class = serializers.UserSerializer
 
