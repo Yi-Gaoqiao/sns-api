@@ -8,7 +8,7 @@ def upload_path(instance, filename):
     
     # Add image folder under the '_media' folder 
     # and then normalize the filename as below    
-    return '/'.join(['image'], str(instance.user.id)+str(instance.nickName)+str('.')+str(ext))
+    return '/'.join(['image', str(instance.user.id)+str(instance.nickName)+str('.')+str(ext)])
 
 
 class UserManager(BaseUserManager):
